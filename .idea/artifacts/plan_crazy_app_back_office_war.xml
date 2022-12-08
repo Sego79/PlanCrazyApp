@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="plan_crazy_app_back_office:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>plan_crazy_app_back_office</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="plan_crazy_app_back_office-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="plan_crazy_app_back_office:war exploded" />
+    </root>
+  </artifact>
+</component>
