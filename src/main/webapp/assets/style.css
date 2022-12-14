@@ -1,0 +1,189 @@
+/* *** GENERAL ***  */
+/* Berlin Sans FB demi font  */
+@font-face {
+    font-family: font;
+    src: url(font.ttf);
+}
+
+* {
+    font-family: font;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**** HEADER ***************************************************  */
+#plan_crazy_app_title {
+    display: block;
+    width: fit-content;
+    margin: calc( 2rem + 2vw) auto;
+    text-decoration: none;
+    font-size: calc(3rem + 2vw);
+    color: red;
+}
+
+/**** LANDING PAGE *****************************************************  */
+#landing_page_title {
+    text-align: center;
+    font-size: calc(2rem + 1vw);
+    margin: calc(1rem + 1vw) 0;
+}
+
+#landing_page_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: calc(1rem + 3vw) auto;
+}
+
+#link_btn {
+    display: block;
+    padding: calc(1rem + 0.5vw);
+    font-size: calc(1rem + 0.5vw);
+    margin: 1rem auto;
+    border: 1px solid rgba(1, 1, 1, 0.3);
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.5);
+    background: green;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/**** USER LIST ******************************************************  */
+#user_list_title {
+    text-align: center;
+    font-size: calc(2rem + 1vw);
+}
+
+#add_user {
+    max-width: 600px;
+    background: green;
+    width: 70%;
+    height: calc(3rem + 2vh);
+    margin: calc(2rem + 2vw) auto;
+    box-shadow: 2px 2px 2px;
+    text-align: center;
+    line-height: calc(3rem + 2vh);
+    border-radius: 2rem;
+    padding: 0 1rem;
+}
+
+#add_user a {
+    text-decoration: none;
+    color: white;
+    font-size: calc(1rem + 1vw);
+}
+
+.user_card {
+    max-width: 1000px;
+    background: #96F99A;
+    width: 90%;
+    margin: 0.5rem auto;
+    border-radius: 2rem;
+    padding: calc(1rem + 1vw);
+}
+
+.admin_card {
+    background: #EFB6E9;
+}
+
+.user_details {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_card ul {
+    list-style: none;
+    line-height: 1.5rem;
+}
+
+.update_user_btn {
+    display: block;
+    margin: calc(0.8rem + 0.8vw) auto 0;
+    width: 40%;
+    background: #37DC3E;
+    padding: calc(0.5rem + 0.5vw);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.4);
+    border: 1px solid rgba(1, 1, 1, 0.4);
+    cursor: pointer;
+}
+
+.admin-btn {
+    background: #F55EE6;
+}
+
+
+
+/**** ADD USER ******************************************************  */
+
+#add_user_title {
+    text-align: center;
+    font-size: calc(2rem + 0.5vw);
+    margin: calc(2rem + 2vw);
+}
+
+#add_user_form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 600px;
+    margin: calc(1rem + 1vw) auto;
+}
+
+#add_user_form input {
+    margin: calc(0.5rem + 0.5vw) 0 calc(1rem + 0.5vw) 0;
+    padding: calc(0.8rem);
+    border-radius: 1rem;
+    border: 1px solid rgba(1, 1, 1, 0.3);
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.3);
+}
+
+#add_user_form fieldset {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    padding: calc(1rem + 1vw);
+}
+
+#add_user_form fieldset input {
+    box-shadow: none;
+}
+
+#add_user_form fieldset label {
+    margin-left: 1rem;
+}
+
+#add_user_form_button {
+    padding: calc(1rem + 0.5vw);
+    font-size: calc(1rem + 0.5vw);
+    width: 50%;
+    margin: 1rem auto;
+    border: 1px solid rgba(1, 1, 1, 0.3);
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.5);
+    background: green;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/**** UPDATE USER ******************************************************  */
+
+#update_user_title {
+    text-align: center;
+}
+
+#delete_user_btn {
+    display: block;
+    margin: 0 auto calc(1rem + 1vw);
+    font-size: calc(0.8rem + 0.5vw);
+    padding: calc(0.5rem + 1vw);
+    background: red;
+    color: white;
+    border-radius: 1rem;
+    border: 1px solid rgba(1, 1, 1, 0.3);
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.5);
+    cursor: pointer;
+}

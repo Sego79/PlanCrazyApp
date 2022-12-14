@@ -8,10 +8,10 @@ import java.util.List;
 @Entity
 @Table(name = "app_user")
 public class AppUser {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="app_user_id", nullable = false, unique = true)
-private Long appUserId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="app_user_id", nullable = false, unique = true)
+    private Long appUserId;
 
     @Column(nullable = false, unique = true)
     private String nickname;
@@ -48,6 +48,33 @@ private Long appUserId;
 
     public AppUser() {
 
+    }
+
+    public AppUser(String nickname, String firstName, String lastName, String address, Integer postcode, String city, String phoneNumber, String email, String password, Boolean isAdmin) {
+        this.nickname = nickname;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.postcode = postcode;
+        this.city = city;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
+        this.isAdmin = isAdmin;
+    }
+
+    public AppUser(Long appUserId, String nickname, String firstName, String lastName, String address, Integer postcode, String city, String phoneNumber, String email, String password, Boolean isAdmin) {
+        this.appUserId = appUserId;
+        this.nickname = nickname;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.address = address;
+        this.postcode = postcode;
+        this.city = city;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
+        this.isAdmin = isAdmin;
     }
 
     public Long getAppUserId() {
@@ -130,11 +157,11 @@ private Long appUserId;
         this.email = email;
     }
 
-    public Boolean getAdmin() {
+    public Boolean getIsAdmin() {
         return isAdmin;
     }
 
-    public void setAdmin(Boolean admin) {
+    public void setIsAdmin(Boolean admin) {
         isAdmin = admin;
     }
 
@@ -152,5 +179,21 @@ private Long appUserId;
 
     public void setUserTaskAssociationList(List<UserTaskAssociation> userTaskAssociationList) {
         UserTaskAssociationList = userTaskAssociationList;
+    }
+
+    @Override
+    public String toString() {
+        return "AppUser{" +
+                "nickname='" + nickname + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", postcode=" + postcode +
+                ", city='" + city + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", isAdmin=" + isAdmin +
+                '}';
     }
 }

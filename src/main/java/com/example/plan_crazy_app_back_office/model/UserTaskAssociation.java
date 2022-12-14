@@ -4,10 +4,10 @@ import jakarta.persistence.*;
 
 @Entity
 public class UserTaskAssociation {
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
-@Column(name="user_task_association_id", nullable = false, unique = true)
-private Long userTaskAssociationId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="user_task_association_id", nullable = false, unique = true)
+    private Long userTaskAssociationId;
 
     @ManyToOne
     @JoinColumn(name = "app_user_id")
