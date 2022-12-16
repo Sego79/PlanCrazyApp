@@ -14,6 +14,7 @@ import java.util.Optional;
 @WebServlet(urlPatterns = "/app-users/update")
 public class UpdateAppUserServlet extends HttpServlet {
 
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String appUserId = req.getParameter("appUserId");
@@ -46,16 +47,18 @@ public class UpdateAppUserServlet extends HttpServlet {
         String phoneNumber = req.getParameter("phoneNumber");
         String email = req.getParameter("email");
         String password = req.getParameter("password");
+        Boolean isActive = Boolean.valueOf(req.getParameter("isActive"));
         Boolean isAdmin = Boolean.valueOf(req.getParameter("isAdmin"));
 
+        System.out.println("**********" + isActive);
 
-        AppUser appUser = new AppUser(id, nickname, firstName, lastName, address, postcode, city, phoneNumber, email, password, isAdmin);
+        AppUser appUser = new AppUser(id, nickname, firstName, lastName, address, postcode, city, phoneNumber, email, password, isActive, isAdmin);
 
-        System.out.println(appUser);
+        System.out.println("youhou!" + appUser);
 
         AppUserDao appUserDao = new AppUserDao();
         appUserDao.update(appUser);
 
-        resp.sendRedirect(req.getContextPath() + "/app-users");
+        resp.sendRedirect(req.getContextPath() + (isAdmin ? "/admins" : "/app-users"));
     }
 }
