@@ -99,6 +99,7 @@ public class AppUserDao implements Dao<AppUser>{
                                 appUser.setPhoneNumber(appUserUpdate.getPhoneNumber());
                                 appUser.setEmail(appUserUpdate.getEmail());
                                 appUser.setPassword(appUserUpdate.getPassword());
+                                appUser.setIsActive(appUserUpdate.getIsActive());
                                 appUser.setIsAdmin(appUserUpdate.getIsAdmin());
                         }
                         et.commit();
